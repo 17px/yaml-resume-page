@@ -1,0 +1,164 @@
+// 核心样式表
+@import './variables.less';
+#wrapper {
+  position: relative;
+  width: 1024px;
+  margin: 50px auto 30px;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 0 15px #c0c0c0;
+  overflow: hidden;
+  transition: all 0.2s ease-in-out;
+  animation: fadeUp 2s cubic-bezier(0.19, 1, 0.22, 1);
+  @media screen and (max-width: 1024px) {
+    margin: 0;
+    box-shadow: none;
+    width: auto;
+    border-radius: 0;
+  }
+  .basic {
+    padding: 20px 30px 20px 30px;
+    background: @color;
+    section {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 10px;
+      @media screen and (max-width: 720px) {
+        display: block;
+      }
+      h1,
+      h2 {
+        @media screen and (max-width: 720px) {
+          text-align: center;
+        }
+      }
+      h2 {
+        @media screen and (max-width: 720px) {
+          padding-top: 20px;
+        }
+      }
+      .left {
+        font-weight: 400;
+        font-size: 48px;
+        color: #fff;
+        small {
+          color: #fff;
+          font-size: 24px;
+          font-family: 'Lucida Grande', 'Hiragino Sans GB',
+            'Hiragino Sans GB W3', 'Helvetica Neue', Helvetica, 'PingFang SC',
+            'Microsoft YaHei', '微软雅黑', Arial, sans-serif;
+        }
+      }
+      .right {
+        font-size: 20px;
+        color: #fff;
+        small {
+          font-size: 14px;
+          color: #fff;
+        }
+      }
+    }
+    .relative {
+      @media screen and (max-width: 720px) {
+        display: block;
+      }
+      display: flex;
+      justify-content: space-between;
+      .left {
+        @media screen and (max-width: 720px) {
+          text-align: center;
+          line-height: 30px;
+        }
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        font-size: 14px;
+        div {
+          color: #fff;
+        }
+      }
+      .right {
+        @media screen and (max-width: 720px) {
+          display: flex;
+          justify-content: center;
+        }
+        line-height: 22px;
+        font-size: 14px;
+        a {
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+          i {
+            padding-left: 10px;
+            color: #fff;
+            font-size: 20px;
+            @media screen and (max-width: 720px) {
+              padding-right: 10px;
+            }
+          }
+          span {
+            color: #fff;
+            @media screen and (max-width: 720px) {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+  .skill,
+  .exp,
+  .project {
+    padding: 10px 30px;
+    h5 {
+      padding-bottom: 10px;
+      border-bottom: 1px solid #eee;
+      color: 12px;
+    }
+    ul {
+      padding: 10px 0 5px 20px;
+      li {
+        line-height: 1.5;
+        padding-bottom: 5px;
+        font-size: 14px;
+      }
+    }
+  }
+  .exp {
+    li {
+      font-size: 14px;
+      position: relative;
+      .title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px 0;
+        a {
+          transition: all 0.5s;
+        }
+        a:hover {
+          cursor: pointer;
+          background: @color;
+          color: #fff;
+        }
+      }
+      .des {
+        padding-bottom: 5px;
+        text-align: justify;
+        line-height: 1.5;
+      }
+    }
+  }
+  .project {
+    ul {
+      li {
+        a {
+          color: @color;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

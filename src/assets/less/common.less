@@ -1,0 +1,81 @@
+@import "../theme/pure/variables.less";
+
+html {
+  background: whitesmoke;
+  line-height: 1;
+  font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei',
+    '微软雅黑', Arial, sans-serif;
+}
+
+* {
+  transition: all 0.5s;
+  box-sizing: border-box;
+  color: #333;
+}
+
+ul {
+  list-style-type: square;
+}
+
+body,
+ul,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.tip {
+  display: inline-block;
+  background: @color;
+  padding: 1px 5px;
+  border-radius: 3px;
+  margin: 0 5px 5px 0;
+  font-size: 12px;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.link {
+  line-height: 1.2;
+  padding: 1px 10px;
+  border-radius: 3px;
+  border: 1px solid @color;
+  color: @color;
+  font-family: 'Lucida Grande', 'Hiragino Sans GB', 'Hiragino Sans GB W3',
+    'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', '微软雅黑',
+    Arial, sans-serif;
+}
+
+.pdf {
+  display: inline-block;
+  position: fixed;
+  z-index: 10;
+  bottom: 6px;
+  left: 50%;
+  margin-left: 520px;
+  padding: 0 8px;
+  border-radius: 3px;
+  font-size: 12px;
+  line-height: 26px;
+  color: #fff;
+  background-color: @color;
+  transition: all 0.2s ease-in-out;
+  animation: fade 1.6s;
+  i {
+    color: #fff;
+  }
+  @media screen and (max-width: 1246px) {
+    left: auto;
+    right: 8px;
+    margin-left: 0;
+  }
+}

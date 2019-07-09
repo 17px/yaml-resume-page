@@ -1,0 +1,55 @@
+// chrome打印样式
+@media print {
+  body {
+    padding-top: 0;
+    #wrapper {
+      width: 1024px;
+      height: 1450px; // A4 大小
+      margin: 0 auto;
+      border-radius: 0;
+      box-shadow: none;
+      padding-bottom: 40px;
+      .basic {
+        section {
+          .left,
+          .right {
+            color: #333;
+            small {
+              color: #333;
+            }
+          }
+        }
+        .relative {
+          .left {
+            div {
+              color: #333;
+            }
+          }
+          .right {
+            a {
+              i {
+                color: #333;
+              }
+              span {
+                color: #333;
+              }
+            }
+          }
+        }
+      }
+    }
+    .pdf {
+      display: none;
+    }
+    .last-modify {
+      position: absolute;
+      z-index: 1;
+      width: 970px;
+      top: auto;
+      bottom: 25px;
+      text-align: left;
+      padding-left: 20px;
+      color: #d1d1d1;
+    }
+  }
+}
