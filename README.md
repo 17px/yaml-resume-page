@@ -4,7 +4,7 @@
 
 ## Demo
 
-演示地址：[https://resume.npmrundev.com](https://resume.npmrundev.com)
+演示地址：[https://www.npmrundev.com/resume](https://www.npmrundev.com/resume)
 
 ![演示图片](https://github.com/chenrrrrr/choi/blob/master/demo.png)
 
@@ -23,3 +23,4 @@ yarn run build
 ### 部署到服务器
 
 将dist文件夹上传到服务器
+
