@@ -1,8 +1,8 @@
 # choi
 
-填写 yaml 配置文件，即可自动化构建一个简单的网页版简历
+填写 yaml 配置文件，只需3番钟，即可自动化构建一个简单的网页版简历
 
-## Demo
+## 示例
 
 演示地址：[https://www.npmrundev.com/resume](https://www.npmrundev.com/resume)
 
@@ -10,6 +10,7 @@
 
 ## 项目结构
 
+```
 ├── README.md
 ├── package.json
 ├── public
@@ -31,10 +32,11 @@
 │   └── main.js
 ├── vue.config.js
 └── yarn.lock
+```
 
 ### 配置文件
 
-配置文件采用了简单移动上手快的`yaml`语法，当`yarn`打包后的`dist`文件存到`nginx`之流的服务器上，会自动解析`conf.yml`并且渲染到页面中，可参考本例中的`conf.yml`配置
+配置文件采用了简单易懂的`yaml`语法，当`yarn`打包后的`dist`文件部署打牌`nginx`之流的服务器上，会自动解析`conf.yml`并且渲染到页面中，可参考本例项目中的`conf.yml`配置
 
 ### 安装依赖
 
@@ -45,10 +47,10 @@ yarn install
 ### 打包构建
 
 ```
-yarn run build
+yarn run build / yarn build
 ```
 
 ### 部署到服务器
 
-将dist文件夹上传到服务器
+将dist文件夹的静态文件上传到服务器中
 
