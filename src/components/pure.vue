@@ -50,13 +50,13 @@
         <li v-for="(item,index) in d.exp" :key="index">
           <div class="title">
             <span class="name">{{item.name}}</span>
-            <a :href="item.link" target="_blank" class="link">link</a>
+            <a v-if="item.link" :href="item.link" target="_blank" class="link">link</a>
           </div>
           <div class="des">
             <b>{{d.conf.lv.l4}}：</b>
-            {{item.des.join('')}}
+            <span v-html="inlineCompiler(item.des.join(''))"></span>
           </div>
-          <div class="stack">
+          <div class="stack" v-if="item.stack">
             <b>{{d.conf.lv.l5}}：</b>
             <span v-html="stackCompiler(item.stack)"></span>
           </div>
@@ -89,6 +89,23 @@ export default {
           list[index] = `<label class='tip'>${item}</label>`;
         });
         return list.join("");
+      };
+    },
+    inlineCompiler() {
+      let re = /`{1,2}[^`](.*?)`{1,2}/g;
+      return str => {
+        let res = str;
+        if (str.match(re)) {
+          let temp = res;
+          str.match(re).forEach(item => {
+            temp = temp.replace(
+              new RegExp(item, "g"),
+              `<label class='tip-grey'>${item.replace(/`/g, "")}</label>`
+            );
+          });
+          res = temp;
+        }
+        return res;
       };
     }
   },

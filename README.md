@@ -1,6 +1,6 @@
 # choi
 
-这是一个自动化构建的网页简历，你只需要填写 yaml 配置文件，就可以自动化构建一个简单的网页版简历，如果你拥有服务器并且搭建了例如 nginx 这类服务，那么只需要做简单的配置，即可将你的简历投入生产
+填写 yaml 配置文件，即可自动化构建一个简单的网页版简历
 
 ## Demo
 
@@ -8,7 +8,33 @@
 
 ![演示图片](https://github.com/chenrrrrr/choi/blob/master/demo.png)
 
-##
+## 项目结构
+
+├── README.md
+├── package.json
+├── public
+│   ├── conf.yml  # 配置文件
+│   ├── favicon.ico # 站点图标
+│   └── index.html # 在这里修改网页的标题
+├── src
+│   ├── App.vue
+│   ├── assets
+│   │   ├── less # 全局less
+│   │   │   └── common.less
+│   │   └── theme
+│   │       └── pure # 默认主题
+│   │           ├── core.less # 主题核心样式文件
+│   │           ├── print.less # 主题打印稿样式
+│   │           └── variables.less # 主题样式文件，默认提供了6种颜色，可供快速修改
+│   ├── components
+│   │   └── pure.vue # pure主题模板组件
+│   └── main.js
+├── vue.config.js
+└── yarn.lock
+
+### 配置文件
+
+配置文件采用了简单移动上手快的`yaml`语法，当`yarn`打包后的`dist`文件存到`nginx`之流的服务器上，会自动解析`conf.yml`并且渲染到页面中，可参考本例中的`conf.yml`配置
 
 ### 安装依赖
 
