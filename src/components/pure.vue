@@ -111,7 +111,7 @@ export default {
   },
   watch: {
     renderData: {
-      handler(n, o) {
+      handler(n) {
         this.d = n;
       },
       deep: true

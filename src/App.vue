@@ -23,7 +23,7 @@ export default {
       try {
         res = this.$Y.safeLoad(src.data);
       } catch (e) {
-        console.log(e);
+        console.log(e)
       }
       return res;
     }
@@ -67,6 +67,5 @@ body {
       display: none;
     }
   }
-  
 }
 </style>

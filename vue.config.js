@@ -1,4 +1,10 @@
 module.exports = {
   baseUrl: './',
-  outputDir: 'dist'
+  outputDir: 'dist',
+  configureWebpack: {
+    externals: {
+      vue: 'Vue',
+      axios: 'axios'
+    }
+  }
 };
