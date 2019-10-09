@@ -4,7 +4,7 @@
 
 ## 示例
 
-演示地址：[https://www.npmrundev.com/resume](https://www.npmrundev.com/resume)
+演示地址：[https://resume.npmrundev.com/](https://resume.npmrundev.com)
 
 ![演示图片](https://github.com/chenrrrrr/choi/blob/master/demo.png)
 
