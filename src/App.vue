@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <p class="last-modify">最后更新时间：{{lastModifyTime}}</p>
+    <p class="last-modify">最后更新时间：{{ lastModifyTime }}</p>
     <templ-pure :renderData="renderData"></templ-pure>
   </div>
 </template>
@@ -13,7 +13,7 @@ export default {
   data() {
     return {
       renderData: {},
-      lastModifyTime: ""
+      lastModifyTime: "",
     };
   },
   methods: {
@@ -26,15 +26,15 @@ export default {
         console.log(e);
       }
       return res;
-    }
+    },
   },
   async mounted() {
     this.renderData = await this.getConfData();
     this.lastModifyTime = await this.renderData.conf.last;
   },
   components: {
-    "templ-pure": Pure
-  }
+    "templ-pure": Pure,
+  },
 };
 </script>
 

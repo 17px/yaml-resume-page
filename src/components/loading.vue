@@ -14,18 +14,13 @@ export default {
   props: {
     show: {
       type: Boolean,
-      default: false
-    }
-  }
+      default: false,
+    },
+  },
 };
 </script>
 
 <style lang="less" scoped>
-/*!
- * Load Awesome v1.1.0 (http://github.danielcardoso.net/load-awesome/)
- * Copyright 2015 Daniel Cardoso <@DanielCardoso>
- * Licensed under MIT
- */
 .la-loading {
   position: fixed !important;
   z-index: 19940121;
