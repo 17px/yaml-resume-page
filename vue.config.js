@@ -3,7 +3,6 @@ module.exports = {
     externals: {
       vue: "Vue",
       axios: "axios",
-      "js-yaml": "yaml",
     },
   },
 };

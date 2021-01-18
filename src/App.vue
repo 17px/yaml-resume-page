@@ -19,7 +19,7 @@ export default {
   methods: {
     async getConfData() {
       let [src, res] = [{}, ""];
-      src = await this.$http.get("./conf.yml");
+      src = await this.$http.get("conf.yml");
       try {
         res = this.$Y.safeLoad(src.data);
       } catch (e) {
