@@ -31,25 +31,26 @@ basic:
 
 # 技能清单
 skill:
-  - 具备扎实的HTML、JavaScript、CSS等技术、曾经熟练使用JQ库、掌握面向对象编程思想
-  - 熟练使用前端自动化构建工具，Webpack、Gulp，均有相关开源项目，github star过百
+  - 以下内容，客观公正，手敲的：
+  - 具备扎实的HTML、JavaScript、CSS等技术、熟练使用JQ库(曾经)、掌握面向对象编程思想(ts)
+  - 熟练使用前端自动化构建工具，Webpack(记不住配置项，查文档)、Gulp(凉了)，均有相关guthub开源项目，github star过百
   - 熟练使用node.js，使用并基本了解express、koa、egg等相关后端框架
-  - 写过java，能够使用ssm、springboot独立拉通前后台，ssr、spa都可以
+  - 写过java(毕设枪手)，能够使用ssm、springboot独立拉通前后台，ssr、spa都可以
   - 注重规范化开发,具有良好的沟通能力、团队合作精神及解决问题的能力
   - 熟练前后端分离开发模式，开发过微信小程序(上线)，微信公众号
-  - 熟悉掌握Vue，及相关周边生态，熟悉es6、es7等标准
+  - 熟悉掌握Vue，及相关周边生态，熟悉es6、es7等标准,以及typescript，正在研习vite+vue3+ts
   - 熟悉团队开发流程，熟练使用git工具进行代码管理
 
 # 项目经验
 exp:
-  - name: 化学危运品小程序
+  - name: 超级危运号 · 微信小程序
     # 如果一行太长，使用 - 拆分
     des:
       - 负责小程序前端技术选型，拉开发架构，主要的技术难点在于用户多入口进入小程序，需要根据场景，进行跨页面通信，利用观察者模式，扩展observer实现
     # 使用' '隔开
     stack: 微信小程序 wepy Axios less Webpack
 
-  - name: 危运品中台crm系统
+  - name: web中台crm系统
     # des中，`强调的文字` || ``强调的文字``
     des:
       - 负责运输模块的开发，使用echarts实现相关完成原型设计，技术难点在于实时数据路径寻优、绘制
@@ -65,9 +66,16 @@ exp:
     stack: php gulp webpack typecho
     link: https://github.com/chenrrrrr/Yuna
 
+  - name: electron股票类分析软件 · 闭源
+    des:
+      - electron+vue+webpack构建，后台服务选用egg.js、部分接口为python flask支持，独立开发
+      - 负责整体ui设计、echarts数据可视化呈现，highstocks辅之
+      - 数据库使用mongoDB，orm中间件egg-mongodb
+    stack: electron vue webpack flask egg
+
 # 作品
 project:
-  - title: Docat
+  - title: Docat 
     link: https://www.mozzie.cn
     des: 一个基于Vue开发的运行时类博客文档，用于代码笔记
 
