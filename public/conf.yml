@@ -25,7 +25,7 @@ basic:
   phone: 18061205553
   email: himozzie@foxmail.com
   # 别再前面加https和www
-  homepage: mozzie.com
+  homepage: mozzie.cn
   # 别再前面加https和www
   git: github.com/chenrrrrrr
 
@@ -75,7 +75,7 @@ exp:
 
 # 作品
 project:
-  - title: Docat 
+  - title: Docat
     link: https://www.mozzie.cn
     des: 一个基于Vue开发的运行时类博客文档，用于代码笔记
 
