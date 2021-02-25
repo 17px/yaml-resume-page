@@ -32,7 +32,7 @@ basic:
 # 技能清单
 skill:
   - 以下内容，客观公正，手敲的：
-  - 具备扎实的HTML、JavaScript、CSS等技术、熟练使用JQ库(曾经)、掌握面向对象编程思想(ts)
+  - 具备扎实的`HTML`、JavaScript、CSS等技术、熟练使用JQ库(曾经)、掌握面向对象编程思想(ts)
   - 熟练使用前端自动化构建工具，Webpack(记不住配置项，查文档)、Gulp(凉了)，均有相关guthub开源项目，github star过百
   - 熟练使用node.js，使用并基本了解express、koa、egg等相关后端框架
   - 写过java(毕设枪手)，能够使用ssm、springboot独立拉通前后台，ssr、spa都可以

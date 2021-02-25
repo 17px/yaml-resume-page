@@ -45,7 +45,7 @@
       <div class="skill" v-if="d.skill">
         <h5>{{ d.conf.lv.l1 }}</h5>
         <ul>
-          <li v-for="item in d.skill" :key="item">{{ item }}</li>
+          <li v-for="item in d.skill" :key="item" v-html="inlineCompiler(item)"></li>
         </ul>
       </div>
       <div class="exp" v-if="d.exp">
