@@ -1,5 +1,5 @@
 // 核心样式表
-@import './variables.less';
+@import "./variables.less";
 #wrapper {
   position: relative;
   width: 1024px;
@@ -46,9 +46,9 @@
         small {
           color: #fff;
           font-size: 24px;
-          font-family: 'Lucida Grande', 'Hiragino Sans GB',
-            'Hiragino Sans GB W3', 'Helvetica Neue', Helvetica, 'PingFang SC',
-            'Microsoft YaHei', '微软雅黑', Arial, sans-serif;
+          font-family: "Lucida Grande", "Hiragino Sans GB",
+            "Hiragino Sans GB W3", "Helvetica Neue", Helvetica, "PingFang SC",
+            "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
         }
       }
       .right {
@@ -120,21 +120,29 @@
     ul {
       padding: 10px 0 5px 20px;
       li {
+        text-align: justify;
         line-height: 1.5;
         padding-bottom: 5px;
         font-size: 14px;
       }
     }
   }
+  .skill {
+    padding-top: 20px;
+  }
   .exp {
     li {
       font-size: 14px;
       position: relative;
+      margin-bottom: 10px;
       .title {
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 5px 0;
+        .name {
+          font-weight: bold;
+        }
         a {
           transition: all 0.5s;
         }
@@ -145,15 +153,19 @@
         }
       }
       .des {
-        padding-bottom: 5px;
+        padding: 5px 0 10px 0;
         text-align: justify;
         line-height: 1.5;
+      }
+      .stack{
+        text-align: left;
       }
     }
   }
   .project {
     ul {
       li {
+        text-align: justify;
         a {
           color: @color;
           text-decoration: underline;

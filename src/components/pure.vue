@@ -59,7 +59,7 @@
               >
             </div>
             <div class="des">
-              <b>{{ d.conf.lv.l4 }}：</b>
+              <span v-if="d.conf.lv.l4 !== ''">{{ d.conf.lv.l4 }}</span>
               <span v-html="inlineCompiler(item.des.join(''))"></span>
             </div>
             <div class="stack" v-if="item.stack">
