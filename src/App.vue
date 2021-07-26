@@ -23,7 +23,7 @@ export default {
       try {
         res = this.$Y.safeLoad(src.data);
       } catch (e) {
-        console.log(e);
+        throw e;
       }
       return res;
     },

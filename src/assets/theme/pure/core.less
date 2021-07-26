@@ -111,7 +111,7 @@
   .skill,
   .exp,
   .project {
-    padding: 10px 30px;
+    padding: 10px 20px;
     h5 {
       padding-bottom: 10px;
       border-bottom: 1px solid #eee;
@@ -128,8 +128,18 @@
   }
   .skill {
     padding-top: 20px;
+    ul {
+      @media screen and (max-width: 720px) {
+        padding-left: 10px;
+      }
+    }
   }
   .exp {
+    ul {
+      @media screen and (max-width: 720px) {
+        padding-left: 10px;
+      }
+    }
     li {
       font-size: 14px;
       position: relative;
@@ -140,6 +150,7 @@
         align-items: center;
         padding: 5px 0;
         .name {
+          padding-right: 50px;
           font-weight: bold;
         }
         a {
@@ -155,13 +166,16 @@
         padding: 5px 0 10px 0;
         line-height: 1.5;
       }
-      .stack{
+      .stack {
         text-align: left;
       }
     }
   }
   .project {
     ul {
+      @media screen and (max-width: 720px) {
+        padding-left: 10px;
+      }
       li {
         a {
           color: @color;
