@@ -54,6 +54,9 @@
               <span class="name">{{ item.name }} • {{ item.role }}</span>
               <a v-if="item.link" :href="item.link" target="_blank" class="link">link</a>
             </div>
+            <div class="bg" v-if="item.bg">
+              <p>背景：{{ item.bg }}</p>
+            </div>
             <div class="des">
               <span v-if="d.conf.modules.l4 !== ''">{{ d.conf.modules.l4 }}</span>
               <ul>
