@@ -1,16 +1,17 @@
 # 配置
 conf:
+  # 主体色
+  mainThemeColor: '#00b38a'
   # 最后更新时间
-  last: 2021年1月19日 14点31分
+  lastModifyTime: 2021年1月19日 14点31分
   # pdf简历url
   pdf: https://www.mozzie.cn/resume.pdf
-  # 各级标题
-  lv:
-    l1: 技能清单
-    l2: 项目经验
-    l3: 作品
-    l4: ''
-    l5: 技术栈
+  # 模块
+  modules:
+    skill: 技能
+    work: 工作经理
+    exp: 项目经验
+    project: 作品
 
 # 基础信息
 basic:
@@ -20,7 +21,7 @@ basic:
   birth: 1994年1月21
   objective: 前端开发
   city: 南京
-  overall: 本科 / 2016年毕业 · 3年工作经验
+  overall: 本科 / 2016年毕业 · 3年前端开发经验
   college: 南京信息工程大学滨江学院
   phone: 18061205553
   email: himozzie@foxmail.com
@@ -29,49 +30,48 @@ basic:
   # 别再前面加https和www
   git: github.com/chenrrrrrr
 
-# 技能清单
+# 技能
 skill:
-  - 以下内容，客观公正，手敲的：
-  - 具备扎实的`HTML`、JavaScript、CSS等技术、熟练使用JQ库(曾经)、掌握面向对象编程思想(ts)
-  - 熟练使用前端自动化构建工具，Webpack(记不住配置项，查文档)、Gulp(凉了)，均有相关guthub开源项目，github star过百
-  - 熟练使用node.js，使用并基本了解express、koa、egg等相关后端框架
-  - 写过java(毕设枪手)，能够使用ssm、springboot独立拉通前后台，ssr、spa都可以
-  - 注重规范化开发,具有良好的沟通能力、团队合作精神及解决问题的能力
-  - 熟练前后端分离开发模式，开发过微信小程序(上线)，微信公众号
-  - 熟悉掌握Vue，及相关周边生态，熟悉es6、es7等标准,以及typescript，正在研习vite+vue3+ts
-  - 熟悉团队开发流程，熟练使用git工具进行代码管理
+  - 近 3 年多前端工作经验，熟练掌握 Javascript、具备 Typescript 项目经验
+  - 熟悉 Vue 全家桶，对`模板引擎`、`AST`等底层原理有一定理解
+  - 熟悉 Node、Java，使用过 Springboot，对 Egg、Koa2 理解较深
+  - 熟悉 Linux，具备部署中小项目 Devops 能力
+  - 兴趣广泛，入门过 Electron、Flutter 等新技术
 
 # 项目经验
 exp:
-  - name: 超级危运号 · 微信小程序
-    # 如果一行太长，使用 - 拆分
+  - name: PC/vue • 亚马逊测评系统
+    role: 负责人
     des:
-      - 负责小程序前端技术选型，拉开发架构，主要的技术难点在于用户多入口进入小程序，需要根据场景，进行跨页面通信，利用观察者模式，扩展observer实现
-    # 使用' '隔开
-    stack: 微信小程序 wepy Axios less Webpack
+      - 重构2个版本，web 端2c和2b入口拆分，系统角色 8+
+      - 带新人，帮助组员解决Bug，理清业务逻辑，优化订单分配算法
+      - 协调移动端与UI部门，控制研发进度，软著申请
+      - 前后端开发架构搭建、接口设计，技术难点疏通，e.g 工具方法、邮件、短信SDK、文件上传、excel报表
+    ps: 难点：组员技术栈受限，初期开发进度缓慢，硬编码的集中管理、路由去中心化等问题，解决方案：采用了spring的注解装饰器、DI，扩展了egg.ts，实现类、方法级的路由装饰器
+    link: youam.co
+    stack: egg vue全家桶 ElementUI
 
-  - name: web中台crm系统
-    # des中，`强调的文字` || ``强调的文字``
+  - name: 小程序/Wepy • 危运超级号
+    role: 核心开发
     des:
-      - 负责运输模块的开发，使用echarts实现相关完成原型设计，技术难点在于实时数据路径寻优、绘制
-      - 同时对`vue-element-admin`配置进行精简，项目打包优化，前端全局拦截处理等工作
-      - 配置`vscode`相关开发规范文件，如`.prettierrc`、`.env`等
-    # 非必须
-    stack: vue webpack vuex vue-router element-ui
+      - 小程序wepy开发架构设计
+      - 全局跨页面消息提示设计、骨架屏的组件便携，网络、持久化等模块封装
+    stack: 小程序API 组件 wepy
 
-  - name: Typecho-cli · 工程化脚手架
+  - name: PC/web · docat文档系统
+    role: 负责人
     des:
-      - 对php开源项目typecho进行了前端工程化构建，由ssr开发模式转变为spa
-      - 经历3次重构，从gulp到webpack，贡献了2个开发框架到社区，项目github如今获得100+star
-    stack: php gulp webpack typecho
-    link: https://github.com/chenrrrrr/Yuna
+      - vue开发的运行时文档应用，对比 vuepress，省去静态编译过程，配合 githooks 实现 markdown 文件同步
+      - 引用cdn即可构建，内置代码高亮，扩展 markdown 原生语法，解决公司内部技术沉淀，项目文档交接问题。
+    stack: markdown vue webpack
+    link: mozzie.cn
 
-  - name: electron股票类分析软件 · 闭源
+  - name: PC/web · 国产开源博客系统typecho · Contributors
     des:
-      - electron+vue+webpack构建，后台服务选用egg.js、部分接口为python flask支持，独立开发
-      - 负责整体ui设计、echarts数据可视化呈现，highstocks辅之
-      - 数据库使用mongoDB，orm中间件egg-mongodb
-    stack: electron vue webpack flask egg
+      - 基于vue、webpack构建，将typecho二次开发由ssr改造为spa，为社区贡献了3套spa开发框架
+      - 开发4个免费主题到社区，github，100+ star
+    stack: vue webpack gulp
+    link: github.com/chenrrrrr/typecho-theme-Moz/tree/feature1.0
 
 # 作品
 project:

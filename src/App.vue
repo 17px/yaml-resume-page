@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <p class="last-modify">最后更新时间：{{ lastModifyTime }}</p>
-    <templ-pure :renderData="renderData"></templ-pure>
+    <Pure :renderData="renderData" />
   </div>
 </template>
 
@@ -9,7 +9,7 @@
 // 引入主题组件
 import Pure from "@/components/pure";
 export default {
-  name: "app",
+  components: { Pure },
   data() {
     return {
       renderData: {},
@@ -27,13 +27,20 @@ export default {
       }
       return res;
     },
+    /**
+     * 设置全局根背景色
+     */
+    setThemeColor(color) {
+      document
+        .getElementsByTagName("body")[0]
+        .style.setProperty("--mainThemeColor", color);
+    },
   },
-  async mounted() {
+  async created() {
     this.renderData = await this.getConfData();
-    this.lastModifyTime = await this.renderData.conf.last;
-  },
-  components: {
-    "templ-pure": Pure,
+    const { mainThemeColor, lastModifyTime } = this.renderData.conf;
+    this.setThemeColor(mainThemeColor);
+    this.lastModifyTime = lastModifyTime;
   },
 };
 </script>
