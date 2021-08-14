@@ -7,50 +7,48 @@
 
 <script>
 // 引入主题组件
-import Pure from "@/components/pure";
+import Pure from '@/components/pure'
 export default {
   components: { Pure },
   data() {
     return {
       renderData: {},
-      lastModifyTime: "",
-    };
+      lastModifyTime: ''
+    }
   },
   methods: {
     async getConfData() {
-      let [src, res] = [{}, ""];
-      src = await this.$http.get("conf.yml");
+      let [src, res] = [{}, '']
+      src = await this.$http.get('conf.yml')
       try {
-        res = this.$Y.safeLoad(src.data);
+        res = this.$Y.safeLoad(src.data)
       } catch (e) {
-        throw e;
+        throw e
       }
-      return res;
+      return res
     },
     /**
      * 设置全局根背景色
      */
     setThemeColor(color) {
-      document
-        .getElementsByTagName("body")[0]
-        .style.setProperty("--mainThemeColor", color);
-    },
+      document.getElementsByTagName('body')[0].style.setProperty('--mainThemeColor', color)
+    }
   },
   async created() {
-    this.renderData = await this.getConfData();
-    const { mainThemeColor, lastModifyTime } = this.renderData.conf;
-    this.setThemeColor(mainThemeColor);
-    this.lastModifyTime = lastModifyTime;
-  },
-};
+    this.renderData = await this.getConfData()
+    const { mainThemeColor, lastModifyTime, title } = this.renderData.conf
+    this.setThemeColor(mainThemeColor)
+    this.lastModifyTime = lastModifyTime
+    document.title = title
+  }
+}
 </script>
 
 <style lang="less" scoped>
 body {
   position: relative;
   -webkit-font-smoothing: antialiased;
-  font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Microsoft YaHei",
-    "微软雅黑", Arial, sans-serif;
+  font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', '微软雅黑', Arial, sans-serif;
   font-size: 14px;
   line-height: 1.57142857;
   color: #333;
