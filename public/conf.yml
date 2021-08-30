@@ -1,7 +1,7 @@
 # 配置
 conf:
-  # 站点标题
-  title: '陈睿 | Web 前端开发'
+  #页面标题
+  title: 陈睿 | 前端开发
   # 主体色
   mainThemeColor: '#00b38a'
   # 最后更新时间
