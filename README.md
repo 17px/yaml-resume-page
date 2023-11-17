@@ -1,3 +1,6 @@
+⚠️ This project is no longer maintained ⚠️
+---
+
 # choi
 
 填写 yaml 配置文件，即可自动化构建一个简单的网页版简历
